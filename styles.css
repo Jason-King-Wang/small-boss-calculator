@@ -517,54 +517,11 @@ a:focus-visible {
   overflow: hidden;
 }
 
-.tarot-card-illustration {
+.tarot-card-image {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 312 / 430;
-  background: #08120f;
-}
-
-.tarot-art-border {
-  fill: #0d1d18;
-  stroke: rgba(241, 178, 74, 0.88);
-  stroke-width: 2.4;
-}
-
-.tarot-art-inner {
-  fill: #122820;
-  stroke: rgba(246, 223, 170, 0.34);
-  stroke-width: 1.4;
-}
-
-.tarot-art-orbit {
-  fill: none;
-  stroke: rgba(241, 178, 74, 0.2);
-  stroke-width: 1.2;
-}
-
-.tarot-art-orbit.small {
-  stroke: rgba(246, 223, 170, 0.14);
-}
-
-.tarot-art-motif {
-  stroke: #f1b24a;
-  stroke-width: 7;
-}
-
-.tarot-art-roman,
-.tarot-art-name {
-  fill: #f6dfaa;
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 700;
-}
-
-.tarot-art-roman {
-  font-size: 28px;
-}
-
-.tarot-art-name {
-  font-size: 26px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
 }
 
 .tarot-position,
