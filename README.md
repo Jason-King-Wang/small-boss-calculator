@@ -14,6 +14,13 @@ This repository is a static GitHub Pages site. It is intentionally simple: HTML,
 - `fortune/daily-tarot.html`
 - `fortune/yes-no-tarot.html`
 - `fortune/love-tarot.html`
+- `fortune/three-card-tarot.html`
+- `fortune/career-tarot.html`
+- `fortune/five-card-tarot.html`
+- `fortune/love-five-card-tarot.html`
+- `fortune/seven-card-tarot.html`
+- `fortune/celtic-cross-tarot.html`
+- `fortune/yearly-tarot.html`
 - `guides/product-page-seo-checklist.html`
 - `templates/customer-follow-up-sheet.html`
 - `legal/privacy.html`

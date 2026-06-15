@@ -29,6 +29,45 @@ body {
   line-height: 1.65;
 }
 
+body.theme-fortune {
+  --bg: #120f16;
+  --surface: #201923;
+  --surface-2: #2b2330;
+  --ink: #f5ead2;
+  --muted: #c8bca3;
+  --line: rgba(218, 180, 96, 0.28);
+  --accent: #d6a84f;
+  --accent-2: #7ea6a1;
+  --shadow: 0 30px 90px rgba(0, 0, 0, 0.42);
+  color-scheme: dark;
+  background:
+    linear-gradient(90deg, rgba(214, 168, 79, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(214, 168, 79, 0.03) 1px, transparent 1px),
+    linear-gradient(145deg, #0f0b12 0%, #17111b 44%, #221728 100%);
+  background-size: 44px 44px, 44px 44px, auto;
+}
+
+body.theme-fortune.spread-love,
+body.theme-fortune.spread-love-five {
+  --accent: #d68b9d;
+  --accent-2: #d6a84f;
+}
+
+body.theme-fortune.spread-career {
+  --accent: #98bd75;
+  --accent-2: #d6a84f;
+}
+
+body.theme-fortune.spread-celtic {
+  --accent: #bfa0e6;
+  --accent-2: #d6a84f;
+}
+
+body.theme-fortune.spread-yearly {
+  --accent: #7fb7d7;
+  --accent-2: #d6a84f;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -47,6 +86,11 @@ a {
   border-bottom: 1px solid rgba(217, 223, 213, 0.8);
   background: rgba(247, 248, 244, 0.92);
   backdrop-filter: blur(16px);
+}
+
+.theme-fortune .site-header {
+  border-bottom-color: rgba(214, 168, 79, 0.24);
+  background: rgba(18, 15, 22, 0.88);
 }
 
 .nav {
@@ -79,6 +123,13 @@ a {
   font-size: 14px;
 }
 
+.theme-fortune .brand-mark {
+  border: 1px solid rgba(214, 168, 79, 0.55);
+  background: linear-gradient(135deg, #3a2434, #161018);
+  color: var(--accent);
+  box-shadow: inset 0 0 0 1px rgba(255, 241, 204, 0.12);
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -93,6 +144,10 @@ a {
 
 .nav-links a:hover {
   color: var(--ink);
+}
+
+.theme-fortune .nav-links a:hover {
+  color: var(--accent);
 }
 
 .container {
@@ -176,6 +231,24 @@ h1,
 .button.accent {
   border-color: var(--accent);
   background: var(--accent);
+}
+
+.theme-fortune .button {
+  border-color: rgba(214, 168, 79, 0.72);
+  background: linear-gradient(180deg, #3a2730, #241821);
+  color: #fff3d5;
+  box-shadow: inset 0 1px 0 rgba(255, 244, 214, 0.16), 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+.theme-fortune .button.secondary {
+  background: rgba(245, 234, 210, 0.04);
+  color: var(--ink);
+}
+
+.theme-fortune .button.accent {
+  border-color: rgba(255, 222, 146, 0.9);
+  background: linear-gradient(180deg, var(--accent), #8d672a);
+  color: #120f16;
 }
 
 .hero-panel {
@@ -266,6 +339,33 @@ h1,
   background: var(--surface);
 }
 
+.theme-fortune .panel,
+.theme-fortune .tool-card,
+.theme-fortune .faq-list details {
+  background:
+    linear-gradient(180deg, rgba(255, 244, 214, 0.055), rgba(255, 244, 214, 0.02)),
+    var(--surface);
+  box-shadow: inset 0 1px 0 rgba(255, 244, 214, 0.08);
+}
+
+.theme-fortune .tool-card:nth-child(3n + 1) {
+  background:
+    linear-gradient(150deg, rgba(214, 168, 79, 0.12), transparent 48%),
+    var(--surface);
+}
+
+.theme-fortune .tool-card:nth-child(3n + 2) {
+  background:
+    linear-gradient(150deg, rgba(126, 166, 161, 0.12), transparent 48%),
+    var(--surface);
+}
+
+.theme-fortune .tool-card:nth-child(3n) {
+  background:
+    linear-gradient(150deg, rgba(191, 160, 230, 0.12), transparent 48%),
+    var(--surface);
+}
+
 .panel {
   padding: 24px;
 }
@@ -334,6 +434,13 @@ select {
   color: var(--ink);
   padding: 10px 12px;
   font: inherit;
+}
+
+.theme-fortune input,
+.theme-fortune select {
+  border-color: rgba(214, 168, 79, 0.36);
+  background: rgba(10, 7, 12, 0.48);
+  color: var(--ink);
 }
 
 input:focus,
@@ -441,7 +548,26 @@ a:focus-visible {
   align-items: stretch;
 }
 
+.theme-fortune .fortune-hero {
+  position: relative;
+  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1.08fr);
+  padding-top: 44px;
+  overflow: hidden;
+}
+
+.theme-fortune .fortune-hero h1 {
+  max-width: 11ch;
+  font-family: Georgia, "Times New Roman", "Noto Serif TC", serif;
+  font-size: clamp(42px, 7vw, 74px);
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+}
+
+.theme-fortune .fortune-hero .lead {
+  max-width: 58ch;
+}
+
 .fortune-visual {
+  position: relative;
   display: grid;
   align-content: end;
   min-height: 500px;
@@ -454,9 +580,59 @@ a:focus-visible {
   overflow: hidden;
 }
 
+.theme-fortune .fortune-visual {
+  isolation: isolate;
+  border-color: rgba(214, 168, 79, 0.5);
+  background:
+    linear-gradient(180deg, rgba(245, 234, 210, 0.06), rgba(18, 15, 22, 0.72)),
+    repeating-linear-gradient(45deg, rgba(214, 168, 79, 0.08) 0 1px, transparent 1px 14px),
+    #1b141d;
+  box-shadow: inset 0 0 0 1px rgba(255, 244, 214, 0.08), var(--shadow);
+}
+
+.theme-fortune .fortune-visual::before,
+.theme-fortune .fortune-visual::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 210px;
+  aspect-ratio: 2 / 3;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.42);
+}
+
+.theme-fortune .fortune-visual::before {
+  top: 48px;
+  right: 170px;
+  transform: rotate(-12deg);
+  background-image: url("assets/tarot-cards/star.webp");
+}
+
+.theme-fortune .fortune-visual::after {
+  top: 82px;
+  right: 52px;
+  transform: rotate(9deg);
+  background-image: url("assets/tarot-cards/world.webp");
+}
+
 .fortune-visual-caption {
   padding: 24px;
   color: #fff;
+}
+
+.theme-fortune .fortune-visual-caption {
+  margin: 24px;
+  border: 1px solid rgba(214, 168, 79, 0.34);
+  border-radius: 12px;
+  background: rgba(18, 15, 22, 0.78);
+  color: var(--ink);
+  backdrop-filter: blur(12px);
+}
+
+.theme-fortune .fortune-visual-caption h2 {
+  font-family: Georgia, "Times New Roman", "Noto Serif TC", serif;
 }
 
 .fortune-visual-caption p {
@@ -475,6 +651,15 @@ a:focus-visible {
   box-shadow: 0 14px 48px rgba(23, 33, 28, 0.08);
 }
 
+.theme-fortune .tarot-tool {
+  position: relative;
+  border-color: rgba(214, 168, 79, 0.42);
+  background:
+    linear-gradient(180deg, rgba(245, 234, 210, 0.07), rgba(245, 234, 210, 0.02)),
+    #1c151f;
+  box-shadow: inset 0 1px 0 rgba(255, 244, 214, 0.08), 0 24px 80px rgba(0, 0, 0, 0.32);
+}
+
 .tarot-question-form {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -489,6 +674,38 @@ a:focus-visible {
   color: var(--muted);
 }
 
+.theme-fortune .tarot-empty {
+  border: 1px solid rgba(214, 168, 79, 0.22);
+  background:
+    linear-gradient(135deg, rgba(214, 168, 79, 0.08), rgba(126, 166, 161, 0.06)),
+    rgba(10, 7, 12, 0.32);
+}
+
+.tarot-reading-summary {
+  display: grid;
+  gap: 6px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-2);
+  padding: 16px;
+}
+
+.tarot-reading-summary span {
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.tarot-reading-summary p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.theme-fortune .tarot-reading-summary {
+  background:
+    linear-gradient(135deg, rgba(214, 168, 79, 0.12), rgba(126, 166, 161, 0.06)),
+    rgba(10, 7, 12, 0.34);
+}
+
 .tarot-empty strong {
   color: var(--ink);
 }
@@ -496,6 +713,10 @@ a:focus-visible {
 .tarot-result-grid {
   display: grid;
   gap: 14px;
+}
+
+.tarot-result-grid.spread-large {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .tarot-card-result {
@@ -507,6 +728,18 @@ a:focus-visible {
   border-radius: 12px;
   background: #fff;
   padding: 16px;
+}
+
+.tarot-result-grid.spread-large .tarot-card-result {
+  grid-template-columns: 110px 1fr;
+  align-items: start;
+}
+
+.theme-fortune .tarot-card-result {
+  border-color: rgba(214, 168, 79, 0.28);
+  background:
+    linear-gradient(180deg, rgba(255, 244, 214, 0.05), rgba(255, 244, 214, 0.02)),
+    rgba(28, 21, 31, 0.96);
 }
 
 .tarot-card-face {
@@ -552,6 +785,41 @@ a:focus-visible {
 
 .tarot-notice {
   margin-top: 4px;
+}
+
+.tarot-reading-points {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+}
+
+.tarot-reading-points div {
+  display: grid;
+  gap: 2px;
+}
+
+.tarot-reading-points dt {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.tarot-reading-points dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.tarot-card-copy {
+  min-width: 0;
+}
+
+.tarot-main-meaning {
+  font-weight: 700;
+}
+
+.theme-fortune .faq-list summary {
+  color: var(--ink);
 }
 
 .faq-list {
@@ -628,6 +896,19 @@ a:focus-visible {
     min-height: 360px;
   }
 
+  .theme-fortune .fortune-visual::before,
+  .theme-fortune .fortune-visual::after {
+    width: 150px;
+  }
+
+  .theme-fortune .fortune-visual::before {
+    right: 130px;
+  }
+
+  .theme-fortune .fortune-visual::after {
+    right: 34px;
+  }
+
   h1,
   .h1 {
     max-width: 10ch;
@@ -646,6 +927,14 @@ a:focus-visible {
 
   .tarot-question-form,
   .tarot-card-result {
+    grid-template-columns: 1fr;
+  }
+
+  .tarot-result-grid.spread-large {
+    grid-template-columns: 1fr;
+  }
+
+  .tarot-result-grid.spread-large .tarot-card-result {
     grid-template-columns: 1fr;
   }
 
