@@ -236,6 +236,29 @@ h1,
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.feature-strip {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(320px, 1.14fr);
+  gap: 24px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #ffffff 0%, #f2f5ee 100%);
+  box-shadow: 0 18px 58px rgba(23, 33, 28, 0.1);
+  overflow: hidden;
+}
+
+.feature-strip > div {
+  padding: 28px;
+}
+
+.feature-strip img {
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+  object-fit: cover;
+}
+
 .panel,
 .tool-card {
   border: 1px solid var(--line);
@@ -414,6 +437,140 @@ a:focus-visible {
   color: var(--ink);
 }
 
+.fortune-hero {
+  align-items: stretch;
+}
+
+.fortune-visual {
+  display: grid;
+  align-content: end;
+  min-height: 500px;
+  border: 1px solid rgba(217, 223, 213, 0.95);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(23, 33, 28, 0.1), rgba(23, 33, 28, 0.9)),
+    var(--fortune-image, url("assets/hero-tarot-reading.webp")) center / cover;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.fortune-visual-caption {
+  padding: 24px;
+  color: #fff;
+}
+
+.fortune-visual-caption p {
+  margin: 0;
+  max-width: 42ch;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.tarot-tool {
+  display: grid;
+  gap: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: 22px;
+  box-shadow: 0 14px 48px rgba(23, 33, 28, 0.08);
+}
+
+.tarot-question-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: end;
+}
+
+.tarot-empty {
+  border-radius: 12px;
+  background: var(--surface-2);
+  padding: 18px;
+  color: var(--muted);
+}
+
+.tarot-empty strong {
+  color: var(--ink);
+}
+
+.tarot-result-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.tarot-card-result {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 16px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  padding: 16px;
+}
+
+.tarot-card-face {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 2 / 3;
+  border: 1px solid rgba(241, 178, 74, 0.7);
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 50% 28%, rgba(241, 178, 74, 0.34), transparent 26%),
+    linear-gradient(145deg, #13251f, #07100d);
+  color: #f6dfaa;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.tarot-position,
+.tarot-question-line {
+  margin: 0 0 4px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.tarot-card-result h3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: baseline;
+  margin: 0 0 6px;
+}
+
+.tarot-card-result h3 span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.tarot-card-result p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.tarot-notice {
+  margin-top: 4px;
+}
+
+.faq-list {
+  display: grid;
+  gap: 14px;
+}
+
+.faq-list details {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  padding: 16px;
+}
+
+.faq-list summary {
+  cursor: pointer;
+  color: var(--ink);
+  font-weight: 900;
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 30px 0 42px;
@@ -453,12 +610,21 @@ a:focus-visible {
   .hero,
   .grid.three,
   .grid.two,
+  .feature-strip,
   .footer-grid {
     grid-template-columns: 1fr;
   }
 
   .hero {
     padding-top: 34px;
+  }
+
+  .feature-strip img {
+    min-height: 240px;
+  }
+
+  .fortune-visual {
+    min-height: 360px;
   }
 
   h1,
@@ -474,6 +640,11 @@ a:focus-visible {
   }
 
   .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tarot-question-form,
+  .tarot-card-result {
     grid-template-columns: 1fr;
   }
 

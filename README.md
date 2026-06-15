@@ -10,6 +10,10 @@ This repository is a static GitHub Pages site. It is intentionally simple: HTML,
 - `tools/ecommerce-profit-calculator.html`
 - `tools/free-shipping-threshold.html`
 - `tools/freelance-rate-calculator.html`
+- `fortune/index.html`
+- `fortune/daily-tarot.html`
+- `fortune/yes-no-tarot.html`
+- `fortune/love-tarot.html`
 - `guides/product-page-seo-checklist.html`
 - `templates/customer-follow-up-sheet.html`
 - `legal/privacy.html`
@@ -32,3 +36,4 @@ https://jason-king-wang.github.io/small-boss-calculator/
 ## Notes
 
 The calculators are planning aids only. They are not tax, legal, financial or accounting advice.
+The tarot and fortune pages are entertainment tools only. They are not medical, psychological, legal, financial or life-decision advice.
