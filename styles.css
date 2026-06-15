@@ -500,7 +500,7 @@ a:focus-visible {
 
 .tarot-card-result {
   display: grid;
-  grid-template-columns: 92px 1fr;
+  grid-template-columns: 132px 1fr;
   gap: 16px;
   align-items: center;
   border: 1px solid var(--line);
@@ -510,17 +510,61 @@ a:focus-visible {
 }
 
 .tarot-card-face {
-  display: grid;
-  place-items: center;
-  aspect-ratio: 2 / 3;
-  border: 1px solid rgba(241, 178, 74, 0.7);
+  margin: 0;
   border-radius: 12px;
-  background:
-    radial-gradient(circle at 50% 28%, rgba(241, 178, 74, 0.34), transparent 26%),
-    linear-gradient(145deg, #13251f, #07100d);
-  color: #f6dfaa;
-  font-weight: 900;
-  letter-spacing: 0;
+  background: #07100d;
+  box-shadow: 0 12px 28px rgba(7, 16, 13, 0.18);
+  overflow: hidden;
+}
+
+.tarot-card-illustration {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 312 / 430;
+  background: #08120f;
+}
+
+.tarot-art-border {
+  fill: #0d1d18;
+  stroke: rgba(241, 178, 74, 0.88);
+  stroke-width: 2.4;
+}
+
+.tarot-art-inner {
+  fill: #122820;
+  stroke: rgba(246, 223, 170, 0.34);
+  stroke-width: 1.4;
+}
+
+.tarot-art-orbit {
+  fill: none;
+  stroke: rgba(241, 178, 74, 0.2);
+  stroke-width: 1.2;
+}
+
+.tarot-art-orbit.small {
+  stroke: rgba(246, 223, 170, 0.14);
+}
+
+.tarot-art-motif {
+  stroke: #f1b24a;
+  stroke-width: 7;
+}
+
+.tarot-art-roman,
+.tarot-art-name {
+  fill: #f6dfaa;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+}
+
+.tarot-art-roman {
+  font-size: 28px;
+}
+
+.tarot-art-name {
+  font-size: 26px;
 }
 
 .tarot-position,
@@ -646,6 +690,10 @@ a:focus-visible {
   .tarot-question-form,
   .tarot-card-result {
     grid-template-columns: 1fr;
+  }
+
+  .tarot-card-face {
+    width: min(150px, 72vw);
   }
 
   .button {
