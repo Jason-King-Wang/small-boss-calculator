@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小老闆算盤｜電商毛利、接案報價與商品上架工具</title>
+  <meta name="description" content="小老闆算盤提供台灣小老闆、自由工作者、電商賣家的毛利試算、免運門檻、接案報價、商品頁 SEO checklist 與詢問追蹤模板。">
+  <link rel="canonical" href="https://jason-king-wang.github.io/small-boss-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="小老闆算盤">
+  <meta property="og:description" content="台灣小老闆、自由工作者、電商賣家的成本與報價工具站。">
+  <meta property="og:image" content="https://jason-king-wang.github.io/small-boss-calculator/assets/hero-small-business-calculator.png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "小老闆算盤",
+    "url": "https://jason-king-wang.github.io/small-boss-calculator/",
+    "description": "台灣小老闆、自由工作者、電商賣家的成本、報價、平台費與上架工具站。"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="主要導覽">
+      <a class="brand" href="index.html"><span class="brand-mark">算</span><span>小老闆算盤</span></a>
+      <div class="nav-links">
+        <a href="tools/ecommerce-profit-calculator.html">毛利試算</a>
+        <a href="tools/free-shipping-threshold.html">免運門檻</a>
+        <a href="tools/freelance-rate-calculator.html">接案報價</a>
+        <a href="guides/product-page-seo-checklist.html">上架檢查</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container hero">
+      <div class="hero-copy">
+        <p class="eyebrow">台灣小生意工具站</p>
+        <h1>先算清楚，再開始賣。</h1>
+        <p class="lead">給小老闆、自由工作者、電商賣家的成本、毛利、報價與上架檢查工具。先用簡單公式避開看起來有賣、實際沒賺的錯誤。</p>
+        <div class="hero-actions">
+          <a class="button accent" href="tools/ecommerce-profit-calculator.html">打開毛利試算器</a>
+          <a class="button secondary" href="#tools">看所有工具</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="商品毛利快算">
+        <img src="assets/hero-small-business-calculator.png" width="1536" height="864" alt="桌上有筆電、計算機、包材與收據，呈現小生意成本試算情境">
+        <form class="quick-tool" data-profit-calculator>
+          <h2>商品毛利快算</h2>
+          <p class="muted">輸入單品售價和成本，先看這筆訂單是不是賺錢。</p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="home-price">售價</label>
+              <input id="home-price" name="price" type="number" value="590" min="0" inputmode="decimal">
+            </div>
+            <div class="field">
+              <label for="home-cost">商品成本</label>
+              <input id="home-cost" name="productCost" type="number" value="230" min="0" inputmode="decimal">
+            </div>
+            <div class="field">
+              <label for="home-packaging">包材成本</label>
+              <input id="home-packaging" name="packaging" type="number" value="18" min="0" inputmode="decimal">
+            </div>
+            <div class="field">
+              <label for="home-shipping">運費補貼</label>
+              <input id="home-shipping" name="shippingSubsidy" type="number" value="40" min="0" inputmode="decimal">
+            </div>
+            <div class="field">
+              <label for="home-platform">平台費 %</label>
+              <input id="home-platform" name="platformFee" type="number" value="6" min="0" inputmode="decimal">
+            </div>
+            <div class="field">
+              <label for="home-payment">金流費 %</label>
+              <input id="home-payment" name="paymentFee" type="number" value="2" min="0" inputmode="decimal">
+            </div>
+          </div>
+          <input name="adCost" type="hidden" value="0">
+          <div class="result-box" aria-live="polite">
+            <div class="result-line"><span>預估淨利</span><span id="profitResult" class="result-value"></span></div>
+            <div class="result-line"><span>毛利率</span><span id="marginResult" class="result-value"></span></div>
+            <div class="result-line"><span>總成本</span><span id="costResult" class="result-value"></span></div>
+            <div class="result-line"><span>不虧本售價</span><span id="breakEvenResult" class="result-value"></span></div>
+          </div>
+        </form>
+      </aside>
+    </section>
+
+    <section class="container section" id="tools">
+      <div class="section-header">
+        <p class="eyebrow">第一批工具</p>
+        <h2>從成本、報價、上架檢查開始。</h2>
+        <p class="section-intro">這一版先做能被搜尋、能被收藏、能真正使用的頁面。每一頁都會有公式、限制和下一步，不做空泛文章。</p>
+      </div>
+      <div class="grid three">
+        <a class="tool-card" href="tools/ecommerce-profit-calculator.html">
+          <span class="tag">電商</span>
+          <h3>電商商品毛利試算器</h3>
+          <p>把售價、商品成本、包材、運費、平台費、廣告成本一起算，避免賣越多虧越多。</p>
+        </a>
+        <a class="tool-card" href="tools/free-shipping-threshold.html">
+          <span class="tag">門檻</span>
+          <h3>免運門檻試算器</h3>
+          <p>用平均毛利和運費反推免運門檻，讓活動看起來好買，但不把利潤吃掉。</p>
+        </a>
+        <a class="tool-card" href="tools/freelance-rate-calculator.html">
+          <span class="tag">接案</span>
+          <h3>接案報價反推工具</h3>
+          <p>從目標月收入、可收費工時和固定開銷，反推時薪、日費和小專案報價。</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="grid two">
+        <article class="panel">
+          <p class="eyebrow">上架前</p>
+          <h2>商品頁 SEO checklist</h2>
+          <p>檢查標題、首屏、規格、FAQ、圖片、內部連結和風險提醒。適合每次上架前快速掃一遍。</p>
+          <p><a class="button secondary" href="guides/product-page-seo-checklist.html">查看 checklist</a></p>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">成交後</p>
+          <h2>詢問追蹤表模板</h2>
+          <p>把 D0、D2、D7、D14 的回訪節奏固定下來，避免有詢問卻沒跟進。</p>
+          <p><a class="button secondary" href="templates/customer-follow-up-sheet.html">查看模板</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="notice">
+        <strong>提醒：</strong>本站工具只做營運估算與內容整理，不是稅務、法律、會計或投資建議。實際平台費、稅務與法規請以官方公告和專業人士意見為準。
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>小老闆算盤</strong>
+        <p class="muted">成本、報價、平台費與上架工具。最後更新：2026-06-15。</p>
+      </div>
+      <div class="footer-links">
+        <a href="legal/privacy.html">隱私權</a>
+        <a href="legal/terms.html">使用條款</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

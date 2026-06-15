@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>電商商品毛利試算器｜小老闆算盤</title>
+  <meta name="description" content="輸入售價、成本、包材、運費、平台費、金流費與廣告成本，快速估算電商商品淨利、毛利率與不虧本售價。">
+  <link rel="canonical" href="https://jason-king-wang.github.io/small-boss-calculator/tools/ecommerce-profit-calculator.html">
+  <meta property="og:title" content="電商商品毛利試算器">
+  <meta property="og:description" content="把平台費、運費補貼、包材與廣告成本一起算，避免賣越多虧越多。">
+  <meta property="og:image" content="https://jason-king-wang.github.io/small-boss-calculator/assets/hero-small-business-calculator.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script defer src="../script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "電商商品毛利試算器",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "url": "https://jason-king-wang.github.io/small-boss-calculator/tools/ecommerce-profit-calculator.html"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="主要導覽">
+      <a class="brand" href="../index.html"><span class="brand-mark">算</span><span>小老闆算盤</span></a>
+      <div class="nav-links">
+        <a href="ecommerce-profit-calculator.html">毛利試算</a>
+        <a href="free-shipping-threshold.html">免運門檻</a>
+        <a href="freelance-rate-calculator.html">接案報價</a>
+        <a href="../guides/product-page-seo-checklist.html">上架檢查</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container article">
+    <p class="eyebrow">電商工具</p>
+    <h1>電商商品毛利試算器</h1>
+    <p class="lead">把售價、成本、包材、運費補貼、平台費、金流費和廣告成本放在同一張表裡看，先確認一單到底賺多少。</p>
+
+    <section class="panel">
+      <form data-profit-calculator>
+        <div class="form-grid">
+          <div class="field">
+            <label for="price">售價</label>
+            <input id="price" name="price" type="number" value="590" min="0" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="productCost">商品成本</label>
+            <input id="productCost" name="productCost" type="number" value="230" min="0" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="packaging">包材成本</label>
+            <input id="packaging" name="packaging" type="number" value="18" min="0" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="shippingSubsidy">運費補貼</label>
+            <input id="shippingSubsidy" name="shippingSubsidy" type="number" value="40" min="0" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="platformFee">平台費 %</label>
+            <input id="platformFee" name="platformFee" type="number" value="6" min="0" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="paymentFee">金流費 %</label>
+            <input id="paymentFee" name="paymentFee" type="number" value="2" min="0" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="adCost">單筆廣告成本</label>
+            <input id="adCost" name="adCost" type="number" value="25" min="0" inputmode="decimal">
+          </div>
+        </div>
+        <div class="result-box" aria-live="polite">
+          <div class="result-line"><span>預估淨利</span><span id="profitResult" class="result-value"></span></div>
+          <div class="result-line"><span>毛利率</span><span id="marginResult" class="result-value"></span></div>
+          <div class="result-line"><span>總成本</span><span id="costResult" class="result-value"></span></div>
+          <div class="result-line"><span>不虧本售價</span><span id="breakEvenResult" class="result-value"></span></div>
+        </div>
+      </form>
+    </section>
+
+    <h2>公式</h2>
+    <p>總成本 = 商品成本 + 包材成本 + 運費補貼 + 廣告成本 + 售價乘以平台費與金流費。淨利 = 售價 - 總成本。</p>
+
+    <h2>什麼時候要重算</h2>
+    <ul>
+      <li>平台手續費或金流費有變動。</li>
+      <li>包材、物流、退貨率或促銷折扣改變。</li>
+      <li>投放廣告後，每筆成交需要分攤廣告成本。</li>
+      <li>打算做免運、折價券、組合包或滿額贈。</li>
+    </ul>
+
+    <div class="notice">
+      本工具是營運估算，不含稅務、會計入帳、庫存損耗與退貨成本。正式定價前請依自己的平台條款和實際費用確認。
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>小老闆算盤</strong><p class="muted">最後更新：2026-06-15。</p></div>
+      <div class="footer-links"><a href="../legal/privacy.html">隱私權</a><a href="../legal/terms.html">使用條款</a><a href="../sitemap.xml">Sitemap</a></div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jason-king-wang.github.io/small-boss-calculator/sitemap.xml

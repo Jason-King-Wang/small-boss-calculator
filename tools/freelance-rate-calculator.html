@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>接案報價反推工具｜小老闆算盤</title>
+  <meta name="description" content="從目標月收入、可收費工時、固定開銷與緩衝比例，反推自由工作者的時薪、日費與小專案報價。">
+  <link rel="canonical" href="https://jason-king-wang.github.io/small-boss-calculator/tools/freelance-rate-calculator.html">
+  <meta property="og:image" content="https://jason-king-wang.github.io/small-boss-calculator/assets/hero-small-business-calculator.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script defer src="../script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="主要導覽">
+      <a class="brand" href="../index.html"><span class="brand-mark">算</span><span>小老闆算盤</span></a>
+      <div class="nav-links">
+        <a href="ecommerce-profit-calculator.html">毛利試算</a>
+        <a href="free-shipping-threshold.html">免運門檻</a>
+        <a href="freelance-rate-calculator.html">接案報價</a>
+        <a href="../guides/product-page-seo-checklist.html">上架檢查</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container article">
+    <p class="eyebrow">接案工具</p>
+    <h1>接案報價反推工具</h1>
+    <p class="lead">很多報價太低，是因為只算執行時間，沒算溝通、行政、空檔、工具費和修改風險。先從目標收入反推。</p>
+
+    <section class="panel">
+      <form data-rate-calculator>
+        <div class="form-grid">
+          <div class="field">
+            <label for="targetIncome">目標月收入</label>
+            <input id="targetIncome" name="targetIncome" type="number" value="80000" min="0" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="workDays">每月工作天</label>
+            <input id="workDays" name="workDays" type="number" value="20" min="0" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="hoursPerDay">每天工作小時</label>
+            <input id="hoursPerDay" name="hoursPerDay" type="number" value="7" min="0" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="billableRatio">可收費比例 %</label>
+            <input id="billableRatio" name="billableRatio" type="number" value="55" min="0" max="100" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="overhead">每月固定開銷</label>
+            <input id="overhead" name="overhead" type="number" value="12000" min="0" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="buffer">風險緩衝 %</label>
+            <input id="buffer" name="buffer" type="number" value="20" min="0" inputmode="decimal">
+          </div>
+        </div>
+        <div class="result-box" aria-live="polite">
+          <div class="result-line"><span>建議時薪</span><span id="hourlyRate" class="result-value"></span></div>
+          <div class="result-line"><span>建議日費</span><span id="dayRate" class="result-value"></span></div>
+          <div class="result-line"><span>10 小時小專案估價</span><span id="projectRate" class="result-value"></span></div>
+        </div>
+      </form>
+    </section>
+
+    <h2>可收費比例是什麼</h2>
+    <p>不是每個工作小時都能開給客戶。開會、修改、回信、報價、學習、行政和空檔都會吃掉時間。新手可以先用 40% 到 60% 估算，穩定後再用自己的紀錄修正。</p>
+
+    <h2>報價前要寫清楚</h2>
+    <ul>
+      <li>交付內容和不包含的範圍。</li>
+      <li>修改次數、時程和追加費用。</li>
+      <li>付款節點和取消政策。</li>
+      <li>素材、帳號、授權和資料由誰提供。</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>小老闆算盤</strong><p class="muted">最後更新：2026-06-15。</p></div>
+      <div class="footer-links"><a href="../legal/privacy.html">隱私權</a><a href="../legal/terms.html">使用條款</a><a href="../sitemap.xml">Sitemap</a></div>
+    </div>
+  </footer>
+</body>
+</html>

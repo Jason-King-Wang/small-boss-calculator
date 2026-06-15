@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>免運門檻試算器｜小老闆算盤</title>
+  <meta name="description" content="用平均客單、毛利率、運費成本與希望保留的利潤，反推電商免運門檻該設多少。">
+  <link rel="canonical" href="https://jason-king-wang.github.io/small-boss-calculator/tools/free-shipping-threshold.html">
+  <meta property="og:image" content="https://jason-king-wang.github.io/small-boss-calculator/assets/hero-small-business-calculator.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script defer src="../script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="主要導覽">
+      <a class="brand" href="../index.html"><span class="brand-mark">算</span><span>小老闆算盤</span></a>
+      <div class="nav-links">
+        <a href="ecommerce-profit-calculator.html">毛利試算</a>
+        <a href="free-shipping-threshold.html">免運門檻</a>
+        <a href="freelance-rate-calculator.html">接案報價</a>
+        <a href="../guides/product-page-seo-checklist.html">上架檢查</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container article">
+    <p class="eyebrow">活動工具</p>
+    <h1>免運門檻試算器</h1>
+    <p class="lead">免運不是越低越好。先用平均毛利和運費成本反推門檻，避免活動拉高訂單卻吃掉利潤。</p>
+
+    <section class="panel">
+      <form data-shipping-calculator>
+        <div class="form-grid">
+          <div class="field">
+            <label for="avgOrder">目前平均客單</label>
+            <input id="avgOrder" name="avgOrder" type="number" value="690" min="0" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="marginRate">平均毛利率 %</label>
+            <input id="marginRate" name="marginRate" type="number" value="42" min="0" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="shippingCost">店家吸收運費</label>
+            <input id="shippingCost" name="shippingCost" type="number" value="65" min="0" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="targetProfit">希望保留淨利</label>
+            <input id="targetProfit" name="targetProfit" type="number" value="180" min="0" inputmode="decimal">
+          </div>
+        </div>
+        <div class="result-box" aria-live="polite">
+          <div class="result-line"><span>目前客單扣運費後毛利</span><span id="currentShippingProfit" class="result-value"></span></div>
+          <div class="result-line"><span>建議免運門檻</span><span id="shippingThreshold" class="result-value"></span></div>
+          <div class="result-line"><span>距離目前客單還差</span><span id="shippingGap" class="result-value"></span></div>
+        </div>
+      </form>
+    </section>
+
+    <h2>使用方式</h2>
+    <p>把目前平均客單、平均毛利率、單筆運費成本和希望保留的淨利輸入。工具會估算免運門檻要拉到多少，才比較不容易把活動做成虧損。</p>
+
+    <h2>設定免運門檻前先確認</h2>
+    <ul>
+      <li>低毛利商品不適合過低免運門檻。</li>
+      <li>大型或易碎商品要另外算包材和破損風險。</li>
+      <li>如果客單通常只差一點，可以用加購品提高門檻達成率。</li>
+      <li>免運門檻不是固定答案，需要跟轉換率和退貨率一起看。</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>小老闆算盤</strong><p class="muted">最後更新：2026-06-15。</p></div>
+      <div class="footer-links"><a href="../legal/privacy.html">隱私權</a><a href="../legal/terms.html">使用條款</a><a href="../sitemap.xml">Sitemap</a></div>
+    </div>
+  </footer>
+</body>
+</html>
