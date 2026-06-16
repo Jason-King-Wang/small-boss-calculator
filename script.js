@@ -30,6 +30,11 @@ function escapeHtml(value) {
     .replace(/'/g, "&#39;");
 }
 
+function trackAnalyticsEvent(name, params = {}) {
+  if (typeof window.gtag !== "function") return;
+  window.gtag("event", name, params);
+}
+
 function calculateProfit(form) {
   const price = numberValue(form, "price");
   const productCost = numberValue(form, "productCost");
@@ -679,6 +684,10 @@ function bindTarotReadings() {
       const questionInput = container.querySelector("[name='tarotQuestion']");
       const question = questionInput ? questionInput.value.trim() : "";
       renderTarotReading(container, drawTarotCards(count), spread, question);
+      trackAnalyticsEvent("tarot_draw", {
+        spread,
+        card_count: count
+      });
     });
   });
 }

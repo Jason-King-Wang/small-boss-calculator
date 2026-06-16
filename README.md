@@ -44,3 +44,10 @@ https://jason-king-wang.github.io/small-boss-calculator/
 
 The calculators are planning aids only. They are not tax, legal, financial or accounting advice.
 The tarot and fortune pages are entertainment tools only. They are not medical, psychological, legal, financial or life-decision advice.
+
+## Analytics and Search Console
+
+- Google Search Console URL-prefix property verified on 2026-06-17 with `google7d3c2fdcdcf1a0a4.html`.
+- Sitemap submitted in Search Console: `https://jason-king-wang.github.io/small-boss-calculator/sitemap.xml`.
+- GA4 web stream: `Small Boss Calculator`, Measurement ID `G-NRVFFRRE9K`.
+- GA4 event added for tarot tools: `tarot_draw` with `spread` and `card_count` only; question text is not sent.
