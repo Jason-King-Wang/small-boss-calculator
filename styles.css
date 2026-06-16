@@ -707,6 +707,68 @@ a:focus-visible {
     rgba(10, 7, 12, 0.34);
 }
 
+.tarot-reading-overview {
+  gap: 12px;
+}
+
+.tarot-reading-overview h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", "Noto Serif TC", serif;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.15;
+}
+
+.tarot-conclusion-answer {
+  border-left: 4px solid var(--accent);
+  padding-left: 12px;
+  color: var(--ink) !important;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.tarot-conclusion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.tarot-conclusion-grid article {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.42);
+  padding: 14px;
+}
+
+.theme-fortune .tarot-conclusion-grid article {
+  border-color: rgba(214, 168, 79, 0.26);
+  background:
+    linear-gradient(180deg, rgba(255, 244, 214, 0.055), rgba(255, 244, 214, 0.02)),
+    rgba(18, 15, 22, 0.38);
+}
+
+.tarot-conclusion-grid strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.tarot-card-list-heading {
+  display: grid;
+  gap: 3px;
+  margin-top: 2px;
+}
+
+.tarot-card-list-heading span {
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.tarot-card-list-heading p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .tarot-empty strong {
   color: var(--ink);
 }
@@ -1000,6 +1062,14 @@ a:focus-visible {
   .tarot-question-form,
   .tarot-card-result {
     grid-template-columns: 1fr;
+  }
+
+  .tarot-conclusion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tarot-conclusion-answer {
+    font-size: 16px;
   }
 
   .tarot-result-grid.spread-large {
