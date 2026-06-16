@@ -261,6 +261,7 @@ h1,
 
 .hero-panel img {
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
@@ -864,9 +865,15 @@ a:focus-visible {
 }
 
 @media (max-width: 860px) {
+  .site-header {
+    position: static;
+  }
+
   .nav {
     align-items: flex-start;
     flex-direction: column;
+    gap: 10px;
+    min-height: auto;
     padding: 14px 0;
   }
 
@@ -874,6 +881,12 @@ a:focus-visible {
     width: 100%;
     overflow-x: auto;
     padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
 
   .hero,
@@ -885,7 +898,21 @@ a:focus-visible {
   }
 
   .hero {
+    gap: 24px;
     padding-top: 34px;
+  }
+
+  .theme-fortune .fortune-hero {
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
+
+  .theme-fortune .fortune-hero h1 {
+    max-width: 12ch;
+  }
+
+  .theme-fortune .fortune-hero .lead {
+    max-width: 100%;
   }
 
   .feature-strip img {
@@ -919,6 +946,51 @@ a:focus-visible {
   .container,
   .nav {
     width: min(100% - 24px, 1120px);
+  }
+
+  h1,
+  .h1,
+  .theme-fortune .fortune-hero h1 {
+    max-width: none;
+    font-size: clamp(36px, 11vw, 48px);
+    line-height: 1.05;
+  }
+
+  .lead {
+    font-size: 17px;
+  }
+
+  .hero {
+    padding: 28px 0 30px;
+  }
+
+  .quick-tool,
+  .panel,
+  .tarot-tool {
+    padding: 16px;
+  }
+
+  .hero-panel > img {
+    display: none;
+  }
+
+  .quick-tool {
+    border-top: 0;
+  }
+
+  .quick-tool .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .fortune-visual,
+  .theme-fortune .fortune-visual {
+    min-height: 320px;
+  }
+
+  .theme-fortune .fortune-visual-caption {
+    margin: 16px;
+    padding: 18px;
   }
 
   .form-grid {
